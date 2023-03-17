@@ -22,3 +22,8 @@ async function searchRepos() {
   return results;
 }
 
+document.onkeydown = function(e) {
+  if (e.key == 'Enter') {
+    searchRepos();
+  }
+}
