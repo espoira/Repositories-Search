@@ -27,6 +27,7 @@ input {
 
 .button {
   color: navy;
+  text-shadow: 1px 1px 5px teal;
   background: #A2C4FF;
   cursor: pointer;
 }

@@ -13,8 +13,8 @@ function addRepository(data) {
   document.getElementById('description').innerHTML = (data.description) ?
            '<b>Описание: </b>' + data.description : 'Нет описания';
 
-  document.querySelector('.repo-element').insertAdjacentHTML('afterend', 
-       '<div>' + document.querySelector('.repo-element').innerHTML + '</div>');  
+  document.querySelector('.search-block').querySelector('div').insertAdjacentHTML('afterbegin', 
+           document.querySelector('.repo-element').innerHTML);  
 	   
   document.querySelector('span').textContent = '';
   
@@ -28,6 +28,8 @@ function formSubmit(e) {
   let repos = [];
   let message = 'Подождите, пожалуйста...';
  
+  document.querySelector('.search-block').querySelector('div').innerHTML = '';
+  
   let subName = document.getElementById('repo-name').value;
   
   if (!subName.trim()) {
